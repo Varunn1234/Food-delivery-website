@@ -1,4 +1,9 @@
+const orderForm = document.getElementById('orderForm');
 
-function orderNow() {
-    alert("Thank you for ordering! Your food is on the way!");
+if (orderForm) {
+  orderForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    alert('Thanks for shopping with MobileHub! We will contact you shortly to confirm your order.');
+    orderForm.reset();
+  });
 }
